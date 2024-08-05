@@ -1,0 +1,332 @@
+#root {
+  --primary-color: #005b4c;
+  --darkGrey-color: #161616;
+  --light-color: #fff;
+  --dark-color: #030303;
+  --grey-color: #f0f0f0;
+  --max-width: 1200px;
+}
+* {
+  margin: 0;
+  padding: 0px;
+}
+
+body {
+  background-color: #fdfdfd;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+}
+.main {
+  display: flex;
+  flex-grow: 1;
+}
+.sidebar,
+.content,
+.sidebar-right {
+  height: 100%;
+}
+.sidebar {
+  width: 5%;
+}
+.content {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar-right {
+  width: 5%;
+}
+.square:nth-child(2) {
+  width: 90%;
+  display: grid;
+
+  grid-template-rows: repeat(2, auto);
+}
+body a {
+  text-decoration: none;
+}
+/* utility  классууд*/
+section {
+  max-width: var(--max-width);
+  margin: auto;
+  display: block;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding-right: 5rem;
+  display: block;
+}
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: #005b4c;
+}
+
+.bg-black {
+  background: #fff;
+  color: #333;
+}
+.bg-white {
+  color: #fff;
+}
+.bg-primary {
+  background: #005b4c;
+  color: #fff;
+}
+.bg-dark {
+  background: #030303;
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  color: #fff;
+  background: #005b4c;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+}
+.btn:hover {
+  display: inline-block;
+  color: #00ffd5;
+  background: #000000;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+}
+.py-3 {
+  padding: 3rem;
+}
+.py-2 {
+  padding: 2rem;
+}
+.py-1 {
+  padding: 1rem;
+}
+.p-1 {
+  margin: 1rem;
+}
+.p-2 {
+  margin: 2rem;
+}
+.p-3 {
+  margin: 3rem;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 3;
+  background: color(0, 0, 0, 0, 0);
+  width: var(--max-width);
+  position: relative;
+  margin-top: 0.5rem;
+  padding: 0rem 1rem;
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.navbar .logo a {
+  color: var(--primary-color);
+}
+
+.navbar .searchType {
+  padding: 0.25rem;
+  padding-bottom: 0.3rem;
+  padding-left: 3rem;
+  border: 1px solid #005b4c;
+  border-radius: 10px;
+}
+.navbar .search i {
+  font-size: 1.2rem;
+}
+.navbar .search i:hover {
+  color: #005b4c;
+}
+.navbar .login {
+}
+/* Онцлох бүтээгдэхүүн*/
+#special {
+  width: var(--max-width);
+  height: 60vh;
+  display: block;
+}
+.container .sectionHeader {
+  width: 100%;
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container .sectionHeader .up-info:nth-child(2) {
+  width: 87%;
+}
+.container .sectionHeader .infoMore {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  text-align: end;
+}
+.sectionHeader .infoMore .data {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+}
+.container .sectionHeader .infoStats {
+  width: 100%;
+  height: 10%;
+  background-color: #005b4c;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  border-radius: 2rem;
+  color: #f0f0f0;
+}
+.container .sectionHeader #big_img {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background: url(/img/png/muchoMas.png) no-repeat center center/cover;
+  transform: rotate(-20deg);
+  background-size: 9rem;
+}
+
+/* Styles for Horizontal  */
+.container .ProductTitle h3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.container .ProductTitle h3::before {
+  content: "";
+  flex: 1 1;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75)
+  );
+  margin: auto;
+}
+.container .ProductTitle h3:after {
+  content: "";
+  flex: 1 1;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  margin: auto;
+}
+
+/* card lists */
+
+.card-section {
+  display: block;
+  width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-section .products {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+}
+.products .card {
+  width: 100%;
+  margin: 1rem;
+  display: block;
+}
+
+/* wishlist */
+
+.products .card .wishlist {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+.products .card:hover .wishlist {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s, visibility 0.5s 0s;
+}
+/* ------------------ */
+
+.products .card .WineImg {
+  width: 100%;
+  height: 14rem;
+  background: url("/img/png/muchoMas.png") no-repeat center;
+  transform: rotate(20deg);
+  background-size: 5rem;
+}
+
+.products .card .divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  margin: 0.7rem;
+}
+
+.products .card .BuyBtn {
+  margin-left: 2rem;
+}
+
+/* Цааш үзэх */
+
+.products h1 {
+  margin: auto;
+  font-size: 3rem;
+  transition: 0.3s ease-in-out;
+}
+/* наашаа цаашаа сум хөдлөх animation */
+
+/* .products h1:hover {
+  content: "Цааш үзэх";
+
+  color: #000000;
+} */
+
+/* footer */
+.footer {
+  width: var(--max-width);
+  background-color: #005b4c;
+  display: block;
+  height: 6rem;
+}
