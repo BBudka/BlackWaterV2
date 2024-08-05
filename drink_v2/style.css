@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Background for the whole page */
+}
+
+/* Navbar */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main {
+  display: flex;
+  flex-grow: 1;
+}
+.sidebar,
+.content,
+.sidebar-right {
+  height: 100%;
+  padding: 20px;
+}
+.sidebar {
+  width: 7%;
+}
+.content {
+  width: 86%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar-right {
+  width: 7%;
+}
+
+.square:nth-child(2) {
+  width: 100%;
+  height: 100%;
+}
+/*  */
+
+.navbar {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+}
+/* .navbar {
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 2;
+  background: color(0, 0, 0, 0, 0);
+  width: var(--max-width);
+  position: relative;
+  margin-top: 0.5rem;
+  padding: 0rem 1rem;
+} */
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.navbar .logo a {
+  color: var(--primary-color);
+}
+
+.navbar .searchType {
+  padding: 0.25rem;
+  padding-bottom: 0.3rem;
+  padding-left: 3rem;
+  border: 1px solid #005b4c;
+  border-radius: 10px;
+}
+.navbar .search i {
+  font-size: 1.2rem;
+}
+.navbar .search i:hover {
+  color: #005b4c;
+}
+
+/* test */
+.maindiv {
+  display: flex;
+  flex-direction: column;
+}
+.maindiv .part1 {
+  background-color: #005b4c;
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background: #005b4c;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+}
+.btn:hover {
+  display: inline-block;
+  color: #00ffd5;
+  background: #000000;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+}
+/* Онцлох бүтээгдэхүүн*/
+
+.container .sectionHeader .infoMore {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  text-align: end;
+}
+.sectionHeader .infoMore .data {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+}
+.container .sectionHeader .infoStats {
+  width: 100%;
+  height: 10%;
+  background-color: #005b4c;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  border-radius: 2rem;
+  color: #f0f0f0;
+}
+.sectionHeader .infoStats .stat {
+  margin-left: 4rem;
+}
+
+/* .container .sectionHeader #big_img {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background: url(/img/png/muchoMas.png) no-repeat center center/cover;
+  transform: rotate(-20deg);
+  background-size: 9rem;
+} */
+
+/* Styles for Horizontal  */
+.container .ProductTitle h3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.container .ProductTitle h3::before {
+  content: "";
+  flex: 1 1;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75)
+  );
+  margin: auto;
+}
+.container .ProductTitle h3:after {
+  content: "";
+  flex: 1 1;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  margin: auto;
+}
+
+/* card lists */
+
+.card-section {
+  display: block;
+  width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-section .products {
+  width: 100%;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+}
+.products .card {
+  width: 100%;
+  margin: 1rem;
+  display: block;
+}
+
+/* wishlist */
+
+.products .card .wishlist {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+.products .card:hover .wishlist {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s, visibility 0.5s 0s;
+}
+/* ------------------ */
+
+.products .card .WineImg {
+  width: 100%;
+  height: 14rem;
+  background: url("/img/png/muchoMas.png") no-repeat center;
+  transform: rotate(20deg);
+  background-size: 5rem;
+}
+
+.products .card .divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  margin: 0.7rem;
+}
+
+.products .card .BuyBtn {
+  margin-left: 2rem;
+}
+
+/* Цааш үзэх */
+
+.products h1 {
+  margin: auto;
+  font-size: 3rem;
+  transition: 0.3s ease-in-out;
+}
+
+/* Styles for Horizontal  */
+.container .ProductTitle h3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.container .ProductTitle h3::before {
+  content: "";
+  flex: 1 1;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75)
+  );
+  margin: auto;
+}
+.container .ProductTitle h3:after {
+  content: "";
+  flex: 1 1;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  margin: auto;
+}
+
+/* card lists */
+
+.card-section {
+  display: block;
+  width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-section .products {
+  width: 100%;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+}
+.products .card {
+  width: 100%;
+  margin: 1rem;
+  display: block;
+}
+
+/* wishlist */
+
+.products .card .wishlist {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+.products .card:hover .wishlist {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s, visibility 0.5s 0s;
+}
+/* ------------------ */
+
+.products .card .WineImg {
+  width: 100%;
+  height: 14rem;
+  background: url("/img/png/muchoMas.png") no-repeat center;
+  transform: rotate(20deg);
+  background-size: 5rem;
+}
+
+.products .card .divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  margin: 0.7rem;
+}
+
+.products .card .BuyBtn {
+  margin-left: 2rem;
+}
+
+/* Цааш үзэх */
+
+.products h1 {
+  margin: auto;
+  font-size: 3rem;
+  transition: 0.3s ease-in-out;
+}
+/* наашаа цаашаа сум хөдлөх animation */
+
+/* .products h1:hover {
+  content: "Цааш үзэх";
+
+  color: #000000;
+} */
+
+/* footer */
+.footer {
+  width: var(--max-width);
+  background-color: #005b4c;
+  display: block;
+  height: 6rem;
+}

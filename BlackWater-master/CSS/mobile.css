@@ -1,0 +1,74 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+}
+.logo {
+  display: none;
+}
+.btn {
+  padding: 0.5rem;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+.login {
+  display: none;
+}
+#special .infoMore {
+  grid-area: infoMore;
+}
+#special .infoStats {
+  grid-area: infoStats;
+}
+#special .sectionHeader {
+  display: grid;
+  grid-template-areas:
+    "infoMore"
+    " infoStats";
+}
+#special .sectionHeader .infoStats {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+}
+.sectionHeader .infoMore p {
+  display: none;
+}
+
+.container .sectionHeader #big_img {
+  position: absolute;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+  background-size: 4.5rem;
+  visibility: hidden;
+}
+
+.container .sectionHeader .infoMore {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 17rem;
+  text-align: center;
+}
+.container .sectionHeader .infoMore div.data {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-section .products {
+  width: 100%;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+}
+
+.footer {
+  display: none;
+}
